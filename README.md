@@ -2,7 +2,7 @@
 
 Currently doesn't perform a check for more than 55 trees being purchased a year.
 
-Also aware of a Maximum update depth bug. 
+Also aware of a Maximum update depth bug occurs when adding a new purchase. 
 
 ## Available Scripts
 
