@@ -8,6 +8,9 @@ Also aware of a Maximum update depth bug occurs when adding a new purchase. Upon
 
 In the project directory, you can run:
 
+### npm install
+To install all necessary dependencies then run the command below.
+
 ### `npm start`
 
 Runs the app in the development mode.\
