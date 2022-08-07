@@ -17,9 +17,7 @@ const tonToKgConversionRate = 1000
 const treeEmissionOffset = 28.5 / months
 export default function Charts({ orderedPurchaseList, emission }) {
   const graphDataSet = getOrderedListWithEmissions()
-
-  console.log(graphDataSet)
-
+  
   function getEmissionsPerMonInKg() {
     if (emission === 0) return 0
     

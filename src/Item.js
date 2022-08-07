@@ -5,7 +5,7 @@ export default function Item({ item, index, updateDate, updateAmountOfTrees, cle
   const treeField = useRef()
 
   useEffect(() =>{
-    if(item.date === "") return
+    if(item.date === "" || item.trees === 0) return
     setStartDate(convertMonthAndYearToDate(item.date))
    
   }, [])

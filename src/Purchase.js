@@ -68,7 +68,7 @@ export default function Purchase({ getAndSetFormattedPurchaseList, getAndSetTota
 
     const addPurchase = () => {
         const lastRow = purchaseList.at(-1)
-        const templatePurchase = { id: uuidv4(), date: "", trees: 0 }
+        const templatePurchase = { id: uuidv4(), date: "", trees: 1 }
 
         if (lastRow == null) return setPurchaseList((previousPurchase) => ([...previousPurchase, templatePurchase]))
         if (lastRow.date === "" || lastRow.trees === 0) return

@@ -37,7 +37,7 @@ export default function Summary({ emission, totalTrees, formattedPurchaseList, o
         }
 
 
-    }, [emission, totalTrees, formattedPurchaseList, orderedPurchaseList, summary])
+    }, [emission, formattedPurchaseList, orderedPurchaseList, summary])
 
     function getFinalSummary() {
         return getTotalCostSummary(formattedPurchaseList) + getSummaryOfMaintenance(formattedPurchaseList)
@@ -61,6 +61,8 @@ export default function Summary({ emission, totalTrees, formattedPurchaseList, o
         if (orderedPurchaseList.length === 0) return
 
         const orderedPurchaseListWithoutNewEmptyFields = orderedPurchaseList.filter(a => a.year !== "")
+
+        if(orderedPurchaseListWithoutNewEmptyFields.length === 0) return
         const startingMonthAndYear = orderedPurchaseListWithoutNewEmptyFields[0].year
         const projectedYear = parseInt(orderedPurchaseListWithoutNewEmptyFields[0].year.slice(-4)) + numberOfYearsSummary
 
